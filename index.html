@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.ibb.co/PTcH9jG/Imagen1.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://js.stripe.com/v3/"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-GhQgjsNhpBS0CjvIvH7V+j+nNM0pz0f9+0JxCuTH2Q/2+WdQQQVnWkc/CMvYV7gG" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- CSS propio -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +27,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-GhQgjsNhpBS0CjvIvH7V+j+nNM0pz0f9+0JxCuTH2Q/2+WdQQQVnWkc/CMvYV7gG" crossorigin="anonymous">
-      <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <title>Sistema de Identificación Humana</title>
 </head>
 <body>
@@ -123,68 +125,46 @@
       <li class="nav-item">
         <a id="carousel-button" class="nav-link" style="color: #2c758c; font-size: 25px;" href="#"><i class="fa fa-file-media"></i></a>
       </li>
-<script>
-// Obtenemos el botón por su ID
-const carouselButton = document.getElementById('carousel-button');
+      
+      <script>
+        // Obtenemos el botón por su ID
+        const carouselButton = document.getElementById('carousel-button');
+      
+        // Agregamos un event listener al botón
+        carouselButton.addEventListener('click', function() {
+          // Definimos las imágenes que se mostrarán
+          const images = [
+            'https://i.ibb.co/58CNGrf/Home.png',
+            'https://i.ibb.co/qxgXBY1/About.png',
+            'https://i.ibb.co/ySmz0nN/Services.png',
 
-// Agregamos un event listener al botón
-carouselButton.addEventListener('click', function() {
-  // Definimos las imágenes que se mostrarán en el carrusel
-  const images = [
-    'https://i.ibb.co/58CNGrf/Home.png',
-    'https://i.ibb.co/58CNGrf/Home.png',
-    'https://i.ibb.co/58CNGrf/Home.png'
-    // Agrega más imágenes si lo deseas
-  ];
-
-  // Creamos un array de objetos con la estructura requerida por SweetAlert2
-  const carouselItems = images.map(image => ({ src: image }));
-
-  // Mostramos la ventana emergente con el carrusel de imágenes
-  Swal.fire({
-    title: 'Información',
-    showCloseButton: true,
-    html: '<div id="carousel-container" class="swiper-container">' +
-      '<div class="swiper-wrapper">' +
-      carouselItems.map(item => '<div class="swiper-slide"><img src="' + item.src + '"></div>').join('') +
-      '</div>' +
-      '<div class="swiper-pagination"></div>' +
-      '</div>',
-    didOpen: () => {
-      // Inicializamos el carrusel utilizando la biblioteca Swiper
-      new Swiper('#carousel-container', {
-        slidesPerView: 1, // Muestra solo una imagen a la vez
-        centeredSlides: true, // Centra las imágenes en el carrusel
-        spaceBetween: 10, // Espacio entre las imágenes
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        // Ajusta los estilos para que las imágenes se ajusten al carrusel
-        on: {
-          init: function() {
-            const container = this.$el[0];
-            const slides = container.querySelectorAll('.swiper-slide');
-            slides.forEach(slide => {
-              slide.style.display = 'flex';
-              slide.style.justifyContent = 'center';
-              slide.style.alignItems = 'center';
-              slide.querySelector('img').style.maxHeight = '100%';
-              slide.querySelector('img').style.maxWidth = '100%';
-              slide.querySelector('img').style.objectFit = 'contain';
-            });
-          },
-          resize: function() {
-            this.update();
-          }
-        }
-      });
-    }
-  });
-});
-
-</script>
-    </ul>
+            // Agrega más imágenes si lo deseas
+          ];
+      
+          // Creamos un array de objetos con la estructura requerida por SweetAlert2
+          const carouselItems = images.map(image => ({ src: image }));
+      
+          // Construimos el HTML para mostrar las imágenes
+          const imagesHtml = carouselItems.map(item => `<img src="${item.src}" style="width: 100%; height: auto; object-fit: contain;">`).join('');
+      
+          // Mostramos la ventana emergente con las imágenes
+          Swal.fire({
+            title: 'Información',
+            icon: 'question',
+            html: imagesHtml,
+       showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar',
+      focusCancel: true,
+      customClass: {
+        confirmButton: 'swal-button',
+        cancelButton: 'swal-button'
+      },
+          });
+        });
+      </script>
+       </ul>
   </nav>
     </div>
 
@@ -228,7 +208,7 @@ carouselButton.addEventListener('click', function() {
                 if (result.value) {
                   var amount = result.value;
                   // Inicializar Stripe con tu clave pública
-                  var stripe = Stripe("TU_CLAVE_PUBLICA_DE_STRIPE");
+                  var stripe = Stripe("pk_live_51NSLmIBNUCxInZmnL6E2lNVgEqJXiBU9WOVrj53JxNUradDkE8gR2IbOUdstUibAlv766OmwsylWauUv4ptRa2lk00w9DO2Go6");
           
                   // Crear una sesión de pago en el servidor
                   fetch("/crear-sesion-pago", {
@@ -344,18 +324,6 @@ crossorigin="anonymous"></script>
 
 <!-- Alerta --> 
 
-<% if (typeof alert != "undefined")  { %>
- <script>
- Swal.fire({
-   title:'<%= alertTitle %>',
-   text:'<%= alertMessage %>',
-   icon:'<%= alertIcon %>',
-   showConfirmButton: <%= showConfirmButton %>,
-   timer: <%= timer %>
- }).then(()=>{
-   window.location='/<%= ruta %>'
- })
- </script>
-<% } %>
+
 </body>
 </html>
