@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+h1,h2,h3,h4,h5,h6,p{
+  font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+  }
+  
+  .fade-in {
+    animation: fade-in 3s forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+  
+  .fade-image {
+    max-width: 50%;
+    height: auto;
+    opacity: 0;
+    animation: fade-in-image 5s forwards;
+  }
+  
+  @keyframes fade-in-image {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+
+  
