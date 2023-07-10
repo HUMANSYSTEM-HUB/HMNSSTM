@@ -14,6 +14,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" type="text/css" href="estilos.css">
+<!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
+
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
+
 <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-GhQgjsNhpBS0CjvIvH7V+j+nNM0pz0f9+0JxCuTH2Q/2+WdQQQVnWkc/CMvYV7gG" crossorigin="anonymous">
       <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -101,7 +110,7 @@
       
 
 <!-- Nav--> 
-<nav class="navbar navbar-expand-lg rounded-lg navbar-dark sticky-top mb-3 ml-2 " style="background-color: whitesmoke">
+<nav class="navbar navbar-expand-lg rounded-lg navbar-dark sticky-top mb-3 ml-2 mr-2 " style="background-color: whitesmoke">
     <a class="" href="#">
     <img class="align-items-center" src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png"  width="60" height="60" alt="Logo">		
     </a>
@@ -112,11 +121,69 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto align-items-center">
       <li class="nav-item">
-        <a a class="nav-link" style="color: #2c758c; font-size: 25px;" href="#"><i class="fa fa-file-media"></i></a>
+        <a id="carousel-button" class="nav-link" style="color: #2c758c; font-size: 25px;" href="#"><i class="fa fa-file-media"></i></a>
       </li>
-      <li class="nav-item">
-        <a a class="nav-link" href="login" style="color: #2c758c; font-size: 25px;" href="#"><i class="fas fa-user"></i></a>
-      </li>
+<script>
+// Obtenemos el botón por su ID
+const carouselButton = document.getElementById('carousel-button');
+
+// Agregamos un event listener al botón
+carouselButton.addEventListener('click', function() {
+  // Definimos las imágenes que se mostrarán en el carrusel
+  const images = [
+    'https://i.ibb.co/58CNGrf/Home.png',
+    'https://i.ibb.co/58CNGrf/Home.png',
+    'https://i.ibb.co/58CNGrf/Home.png'
+    // Agrega más imágenes si lo deseas
+  ];
+
+  // Creamos un array de objetos con la estructura requerida por SweetAlert2
+  const carouselItems = images.map(image => ({ src: image }));
+
+  // Mostramos la ventana emergente con el carrusel de imágenes
+  Swal.fire({
+    title: 'Información',
+    showCloseButton: true,
+    html: '<div id="carousel-container" class="swiper-container">' +
+      '<div class="swiper-wrapper">' +
+      carouselItems.map(item => '<div class="swiper-slide"><img src="' + item.src + '"></div>').join('') +
+      '</div>' +
+      '<div class="swiper-pagination"></div>' +
+      '</div>',
+    didOpen: () => {
+      // Inicializamos el carrusel utilizando la biblioteca Swiper
+      new Swiper('#carousel-container', {
+        slidesPerView: 1, // Muestra solo una imagen a la vez
+        centeredSlides: true, // Centra las imágenes en el carrusel
+        spaceBetween: 10, // Espacio entre las imágenes
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        // Ajusta los estilos para que las imágenes se ajusten al carrusel
+        on: {
+          init: function() {
+            const container = this.$el[0];
+            const slides = container.querySelectorAll('.swiper-slide');
+            slides.forEach(slide => {
+              slide.style.display = 'flex';
+              slide.style.justifyContent = 'center';
+              slide.style.alignItems = 'center';
+              slide.querySelector('img').style.maxHeight = '100%';
+              slide.querySelector('img').style.maxWidth = '100%';
+              slide.querySelector('img').style.objectFit = 'contain';
+            });
+          },
+          resize: function() {
+            this.update();
+          }
+        }
+      });
+    }
+  });
+});
+
+</script>
     </ul>
   </nav>
     </div>
@@ -132,6 +199,67 @@
              <p style="text-align: justify;">El sistema de identificación humana consta de una tarjeta con chip y una aplicación web que permite realizar y recibir pagos. La tarjeta de identificación almacena datos personales y financieros, y se vincula a la aplicación web a través de un código QR. La aplicación web ofrece diversas funcionalidades, como la posibilidad de pagar con la tarjeta, consultar el historial de transacciones y gestionar los fondos. Además, la aplicación permite enviar y recibir dinero entre usuarios y realizar pagos a través de un sistema de códigos QR. En resumen, este sistema de identificación humana permite una gestión eficiente y segura de transacciones financieras a través de una tarjeta de identificación y una aplicación web.</p>
           </div>
           <button id="btnAceptar" type="button" class="btn btn-outline-danger mr-3">Donar</button>
+          <script>
+
+            // Agregar evento al botón de donar
+            var btnDonar = document.getElementById("btnAceptar");
+            btnDonar.addEventListener("click", function () {
+              // Mostrar el swal con los botones de donación
+              Swal.fire({
+                title: "Selecciona una cantidad para donar",
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+                confirmButtonText: "Donar",
+                html:
+                  '<button class="swal-donate-button" data-amount="50">$50</button>' +
+                  '<button class="swal-donate-button" data-amount="100">$100</button>' +
+                  '<button class="swal-donate-button" data-amount="200">$200</button>' +
+                  '<button class="swal-donate-button" data-amount="500">$500</button>' +
+                  '<input type="number" placeholder="Otra cantidad" id="customAmount" class="swal-donate-input">',
+                focusConfirm: false,
+                preConfirm: function () {
+                  // Obtener el valor de la cantidad personalizada
+                  var customAmount = document.getElementById("customAmount").value;
+                  if (customAmount) {
+                    return customAmount;
+                  }
+                },
+              }).then(function (result) {
+                if (result.value) {
+                  var amount = result.value;
+                  // Inicializar Stripe con tu clave pública
+                  var stripe = Stripe("TU_CLAVE_PUBLICA_DE_STRIPE");
+          
+                  // Crear una sesión de pago en el servidor
+                  fetch("/crear-sesion-pago", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ amount: amount }),
+                  })
+                    .then(function (response) {
+                      return response.json();
+                    })
+                    .then(function (session) {
+                      // Redirigir al usuario a la página de pago de Stripe
+                      return stripe.redirectToCheckout({ sessionId: session.id });
+                    })
+                    .then(function (result) {
+                      if (result.error) {
+                        // Manejar el error de Stripe
+                        console.error(result.error.message);
+                      }
+                    })
+                    .catch(function (error) {
+                      // Manejar otros errores
+                      console.error(error);
+                    });
+                }
+              });
+            });
+          
+          </script>
    <br> <br>
           <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
             <div class="register-form form" style="color:#2d7990">
