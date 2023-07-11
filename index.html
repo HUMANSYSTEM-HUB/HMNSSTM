@@ -7,6 +7,7 @@
     <link rel="icon" href="https://i.ibb.co/PTcH9jG/Imagen1.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -136,7 +137,12 @@
           const images = [
             'https://i.ibb.co/58CNGrf/Home.png',
             'https://i.ibb.co/qxgXBY1/About.png',
+
             'https://i.ibb.co/ySmz0nN/Services.png',
+            'https://i.ibb.co/g69RT8x/5.png',
+            'https://i.ibb.co/9ZrSXYy/6.png',
+            'https://i.ibb.co/n0GCxvK/7.png',
+            'https://i.ibb.co/5kS5m5r/8.png'
 
             // Agrega más imágenes si lo deseas
           ];
@@ -177,73 +183,98 @@
           <div class="register-form form ml-2 mr-2" style="color:white">
             <h2 class="">¿Qué es el Sistema de Identificacion Humana?</h2>   <br>
              <p style="text-align: justify;">El sistema de identificación humana consta de una tarjeta con chip y una aplicación web que permite realizar y recibir pagos. La tarjeta de identificación almacena datos personales y financieros, y se vincula a la aplicación web a través de un código QR. La aplicación web ofrece diversas funcionalidades, como la posibilidad de pagar con la tarjeta, consultar el historial de transacciones y gestionar los fondos. Además, la aplicación permite enviar y recibir dinero entre usuarios y realizar pagos a través de un sistema de códigos QR. En resumen, este sistema de identificación humana permite una gestión eficiente y segura de transacciones financieras a través de una tarjeta de identificación y una aplicación web.</p>
-          </div>
+          </div><div id="qrCode"></div>
           <button id="btnAceptar" type="button" class="btn btn-outline-danger mr-3">Donar</button>
           <script>
+// Agregar evento al botón de donar
+var btnDonar = document.getElementById("btnAceptar");
+btnDonar.addEventListener("click", function () {
+  // Mostrar el swal con los botones de donación
+  Swal.fire({
+    title: "Selecciona una cantidad para donar (Stripe, Cody, Alypay)",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    confirmButtonText: "Donar",
+    html:
+      '<button class="swal-donate-button" data-amount="50" id="btn50">$50</button>' +
+      '<button class="swal-donate-button" data-amount="100" id="btn100">$100</button>' +
+      '<button class="swal-donate-button" data-amount="200" id="btn200">$200</button>' +
+      '<button class="swal-donate-button" data-amount="500" id="btn500">$500</button>' +
+      '<input type="number" placeholder="Pago con Stripe" id="customAmount" class="swal-donate-input">' +
+      '<div id="qrCode"></div>',
+    focusConfirm: false,
+    preConfirm: function () {
+      // Obtener el valor de la cantidad personalizada
+      var customAmount = document.getElementById("customAmount").value;
+      if (customAmount) {
+        return customAmount;
+      }
+    },
+    didOpen: function () {
+      // Asignar eventos click a los botones de donación
+      document.getElementById("btn50").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/vBh6208/Whats-App-Image-2023-07-11-at-8-20-48-AM.jpg");
+      });
+      document.getElementById("btn100").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/bbnvPJp/Whats-App-Image-2023-07-11-at-8-20-48-AM-1.jpg");
+      });
+      document.getElementById("btn200").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/JKR3LBn/Whats-App-Image-2023-07-11-at-8-20-48-AM-3.jpg");
+      });
+      document.getElementById("btn500").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/wKcckt4/Whats-App-Image-2023-07-11-at-8-20-48-AM-2.jpg");
+      });
+    },
+  }).then(function (result) {
+    if (result.value) {
+      var amount = result.value;
+      // Inicializar Stripe con tu clave pública
+      var stripe = Stripe("pk_live_51NSLmIBNUCxInZmnL6E2lNVgEqJXiBU9WOVrj53JxNUradDkE8gR2IbOUdstUibAlv766OmwsylWauUv4ptRa2lk00w9DO2Go6");
 
-            // Agregar evento al botón de donar
-            var btnDonar = document.getElementById("btnAceptar");
-            btnDonar.addEventListener("click", function () {
-              // Mostrar el swal con los botones de donación
-              Swal.fire({
-                title: "Selecciona una cantidad para donar (Stripe, Cody, Alypay)",
-                showCancelButton: true,
-                cancelButtonText: "Cancelar",
-                confirmButtonText: "Donar",
-                html:
-                  '<button class="swal-donate-button" data-amount="50">$50</button>' +
-                  '<button class="swal-donate-button" data-amount="100">$100</button>' +
-                  '<button class="swal-donate-button" data-amount="200">$200</button>' +
-                  '<button class="swal-donate-button" data-amount="500">$500</button>' +
-                  '<input type="number" placeholder="Otra cantidad" id="customAmount" class="swal-donate-input">',
-                focusConfirm: false,
-                preConfirm: function () {
-                  // Obtener el valor de la cantidad personalizada
-                  var customAmount = document.getElementById("customAmount").value;
-                  if (customAmount) {
-                    return customAmount;
-                  }
-                },
-              }).then(function (result) {
-                if (result.value) {
-                  var amount = result.value;
-                  // Inicializar Stripe con tu clave pública
-                  var stripe = Stripe("pk_live_51NSLmIBNUCxInZmnL6E2lNVgEqJXiBU9WOVrj53JxNUradDkE8gR2IbOUdstUibAlv766OmwsylWauUv4ptRa2lk00w9DO2Go6");
-          
-                  // Crear una sesión de pago en el servidor
-                  fetch("/crear-sesion-pago", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ amount: amount }),
-                  })
-                    .then(function (response) {
-                      return response.json();
-                    })
-                    .then(function (session) {
-                      // Redirigir al usuario a la página de pago de Stripe
-                      return stripe.redirectToCheckout({ sessionId: session.id });
-                    })
-                    .then(function (result) {
-                      if (result.error) {
-                        // Manejar el error de Stripe
-                        console.error(result.error.message);
-                      }
-                    })
-                    .catch(function (error) {
-                      // Manejar otros errores
-                      console.error(error);
-                    });
-                }
-              });
-            });
-          
+      // Crear una sesión de pago en el servidor
+      fetch("/crear-sesion-pago", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ amount: amount }),
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          // Redirigir al usuario a la página de pago de Stripe
+          return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(function (result) {
+          if (result.error) {
+            // Manejar el error de Stripe
+            console.error(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          // Manejar otros errores
+          console.error(error);
+        });
+    }
+  });
+
+  // Función para mostrar la imagen del código QR en el Swal
+  function showQRImage(imageUrl) {
+    // Insertar la imagen en el Swal
+    Swal.update({
+      imageUrl: imageUrl,
+      imageWidth: 128,
+      imageHeight: 128,
+      imageAlt: "Código QR de donación",
+    });
+  }
+});
           </script>
    <br> <br>
           <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
             <div class="register-form form" style="color:#2d7990">
-              <form action="/register" method="POST">
+              <form action="URL_DE_LA_WEBAPP" method="POST">
               <div class="form-group mt-2">
                   <label for="inputNombre">Nombre Completo</label> 
                   <input type="text" class="form-control" style="color:#f87d6a" name="nombre" id="inputNombre" placeholder="Sergio Campos Medina" >
@@ -293,10 +324,10 @@
                   Acepto las condiciones y me registro en un excel en la nube
                   </label>
                   </div>
-                <button type="submit" class="btn btn-info mt-3">Registrar</button>
+                <button type="submit" value="Enviar" class="btn btn-info mt-3">Registrar</button>
                 </form>
               </div>
-              </div>
+            </div>
               </div> 
  
 
