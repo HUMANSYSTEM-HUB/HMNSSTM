@@ -191,7 +191,7 @@ var btnDonar = document.getElementById("btnAceptar");
 btnDonar.addEventListener("click", function () {
   // Mostrar el swal con los botones de donación
   Swal.fire({
-    title: "Selecciona una cantidad para donar (Stripe, Cody, Alypay)",
+    title: "Selecciona una cantidad para donar (Stripe, Codi, Alypay)",
     showCancelButton: true,
     cancelButtonText: "Cancelar",
     confirmButtonText: "Donar",
@@ -264,8 +264,8 @@ btnDonar.addEventListener("click", function () {
     // Insertar la imagen en el Swal
     Swal.update({
       imageUrl: imageUrl,
-      imageWidth: 128,
-      imageHeight: 128,
+      imageWidth: 400,
+      imageHeight: 400,
       imageAlt: "Código QR de donación",
     });
   }
@@ -286,7 +286,7 @@ btnDonar.addEventListener("click", function () {
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputCorreo">Correo</label>
-                    <input type="email" class="form-control" style="color:#f87d6a" name="correo" id="inputCorreo" placeholder="camposmedinasergio@gmail.com">
+                    <input type="email" class="form-control" style="color:#f87d6a" name="correo" id="inputCorreo" placeholder="SergioFR@gmail.com">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputCelular">Telefono</label>
@@ -321,15 +321,19 @@ btnDonar.addEventListener("click", function () {
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="gridCheck">
                   <label class="form-check-label" for="gridCheck" style="color:#2d7990">
-                  Acepto el tratamiento de mis datos personales y me registro en un excel en la nube
+                  Acepto el tratamiento de mis datos personales y me registro en un excel en la nube. (Objetivamente Demostrativo)
                   </label>
                   </div>
-                <button type="submit" value="Enviar" class="btn btn-info mt-3">Registrar</button>
+                <button id="btnenviar" type="submit" value="Enviar" class="btn btn-info mt-3">Registrar</button>
                 </form>
               </div>
             </div>
               </div> 
- 
+ <script>
+  var btnDonar = document.getElementById("btnenviar");
+btnDonar.addEventListener("click", function () {
+
+ </script>
 
 <!-- Pie de pagina -->
 <div style="color: #2d7990 " class="mt-3" style="background-color: white;">
