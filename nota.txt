@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/YLczr2Y/movil-1.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="public\css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Human System</title>
+</head>
+<body>
+
+<!-- Titulo --> 
+
+<!-- Titulo -->
+<div class="pt-2 text-center" style="background-color: white" ><h1 style="color: #2c758c;" id="line1"></h1>
+	<h1 style="color: #F17460; margin-left: 20px;" id="line2"></h1>
+	
+	<script>
+		const text1 = "Human";
+		const text2 = "System";
+	
+		let i = 0;
+		let j = 0;
+	
+		function typeWriter1() {
+			if (i < text1.length) {
+				document.getElementById("line1").innerHTML += text1.charAt(i);
+				i++;
+				setTimeout(typeWriter1, Math.floor(Math.random() * 150) + 50);
+			}
+		}
+	
+		function typeWriter2() {
+			if (j < text2.length) {
+				document.getElementById("line2").innerHTML += text2.charAt(j);
+				j++;
+				setTimeout(typeWriter2, Math.floor(Math.random() * 150) + 50);
+			}
+		}
+	
+		typeWriter1();
+		setTimeout(typeWriter2, text1.length * (Math.floor(Math.random() * 150) + 50) + 1000);
+	</script>
+
+	</div>
+<!-- Nav --> 
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: white;">
+		<a class="ml-2 " href="#">
+		<img class="" src="https://i.ibb.co/J2kzm55/H-S-Logo.png"  width="90" height="90" alt="Logo">		
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+		aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav ml-auto align-items-center">
+		<li class="nav-item active">
+		<a class="nav-link" href="#" style="color:#2c758c ; font-size: 20px;"> <i class="mr-2 fas fa-calendar"></i>2023 / 06 / 02<span class="sr-only">(current)</span></a>
+		</li>
+			</ul>
+			</div>
+	
+		</nav>				
+	<!-- Formulario de validacion --> 
+<div id="Validacion" class="text-center pl-2 pr-2" style="background-color: white">
+		  <div class="col col-md text-white p-3  rounded-lg " style="background-color: #2C758C">
+			<div class="pb-1">
+				<h2 class="mb-3" ><i class=" mr-3  fas fa-vote-yea"></i>Instituto Nacional Electoral </h2>
+			</div>
+				<div class="col col-md text-white p-3 mb-2  rounded-lg " style="background-color: #f87d6a">
+					<div class="text-white p-4  rounded-lg" style="background-color: #e8dddd54">
+						<h6 class="mb-3 fw-normal">IA - Fabian Genetics</h6>
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/uuRNIpNZA2n/embed" width="640" height="360"></iframe>
+						</div>
+					</div>
+				</div>
+
+			<form action="verification" method="POST">
+			<div class="text-white p-4  rounded-lg" style="background-color: rgba(245, 245, 245, 0.313)">
+			<h5 class="fw-normal" style="text-align: justify;">Estimada Presidenta Guadalupe Taddei Zavala</h5><br>
+			<div class="mb-5 fw-normal">
+			<p style="text-align: justify; size: 40px;">Espero que este mensaje le encuentre bien. Me dirijo a usted como profesional en negocios de software con el fin de solicitar su apoyo y atención en relación a la implementación de un sistema electrónico electoral de conocimiento de la anterior administración.
+				<br>
+				<br> Como seguramente sabe, un sistema electoral eficiente y seguro es fundamental para garantizar la transparencia y la confiabilidad en los procesos democráticos. Durante mi análisis y evaluación de los sistemas electorales anteriores, he identificado la necesidad de implementar un nuevo sistema electrónico electoral que se ajuste a los estándares actuales y que aproveche las últimas tecnologías disponibles.
+			<br>
+			<br>Adjunto a este mensaje el acuse de registro del proveedor correspondiente al proyecto de implementación del sistema electrónico electoral. Esta solicitud se basa en el conocimiento y la experiencia adquiridos en proyectos similares, así como en el compromiso de mejorar y modernizar los procesos electorales en nuestro país.
+			<br>
+			<br>Agradezco de antemano su atención y apoyo en este asunto. Me encantaría discutir en mayor detalle los beneficios y las características del sistema propuesto, así como responder cualquier pregunta o inquietud que pueda surgir.
+			<br>
+			<br>Quedo a su disposición para programar una reunión o llamada telefónica en el momento que le resulte conveniente. Estoy convencido de que, trabajando juntos, podemos lograr una implementación exitosa de este sistema electrónico electoral, fortaleciendo así nuestra democracia y asegurando la confianza de nuestros ciudadanos en el proceso electoral.
+			<br>
+			<br>Adjunto a este mensaje el acuse de registro del proveedor correspondiente al proyecto de implementación del sistema electrónico electoral. Esta solicitud se basa en el conocimiento y la experiencia adquiridos en proyectos similares, así como en el compromiso de mejorar y modernizar los procesos electorales en nuestro país.
+			<br>
+			<br>Agradezco su tiempo y consideración, y espero con interés su respuesta.
+			<br>
+				<br>
+				CEO de Human System.
+				<br>	 
+				Sergio Campos Medina
+			</p>
+            </div>
+
+
+			<form id="formulario" action="verification" method="POST">
+				<div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
+					<div class="form-check ">
+						<input class="form-check-input" type="checkbox" id="gridCheck" onchange="habilitarBotones()">
+						<label class="form-check-label" for="gridCheck" style="color:#2d7990">
+					<p>	 La siguiente opción habilita la visualización y descarga de un documento electrónico.</p>
+						</label>
+					</div>
+					<h5 class="mb-3 fw-normal" style="color:#2c758c">¿Quieres visualizar el documento electrónico para su posterior descarga?</h5>
+					<button id="btnAceptar" type="button" class="btn btn-success mr-3" disabled><i class="mr-2 fas fa-eye"></i>Sí</button>
+					<button id="btnDeclinar" type="button" class="btn btn-danger" disabled><i class="mr-2 fas fa-times"></i>No</button>
+				</div>
+			</form>
+			
+			<script>
+				function habilitarBotones() {
+					var checkbox = document.getElementById('gridCheck');
+					var btnAceptar = document.getElementById('btnAceptar');
+					var btnDeclinar = document.getElementById('btnDeclinar');
+					
+					if (checkbox.checked) {
+						btnAceptar.disabled = false;
+						btnDeclinar.disabled = false;
+					} else {
+						btnAceptar.disabled = true;
+						btnDeclinar.disabled = true;
+					}
+				}
+			</script>
+			
+            </div>
+            </div>
+            </div>
+    
+	</div>
+
+
+
+
+<!-- Pie de pagina -->
+
+<div style="color: #2d7990; background-color: white; text-align: center;" class="mt-3">
+	<a class="" href="#">
+	  <img class="" src="https://i.ibb.co/J2kzm55/H-S-Logo.png" width="80" height="80" alt="Logo">		
+	  </a>
+	<p class="m-0 p-4">Autor Sergio Campos Medina.<br>
+		Registro: No.03-2022-050214132600-01 
+		<br> Patente: MX/a/2023/001585.</p>
+</div>
+
+
+	<!-- Scripts -->
+	
+			  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+			  <!-- Scrollreveal -->
+			  <script src="https://unpkg.com/scrollreveal"></script>
+			  <script src="assets/js/scrollReveal.js"></script>
+			  <!-- Dependencias de bootstrap -->
+			  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			  crossorigin="anonymous"></script>
+			  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+			  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+			  crossorigin="anonymous"></script> 
+			  <script>
+				  document.addEventListener('DOMContentLoaded', function() {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    });
+	document.getElementById('btnAceptar').addEventListener('click', function() {
+    swalWithBootstrapButtons.fire({
+      title: 'Ha aceptado la visualización!',
+      text: 'Presione el botón para descargar el documento',
+      icon: 'success',
+      imageUrl: 'https://i.ibb.co/D7hMw03/Acuse-Registro-page-0001.jpg',
+      imageWidth: 500,
+      imageHeight: 1000,
+      imageAlt: 'Imagen personalizada',
+      confirmButtonText: 'Descargar',
+      customClass: {
+        confirmButton: 'btn btn-success'
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Crea un enlace temporal y simula un clic para descargar el documento
+        const link = document.createElement('a');
+        link.href = 'Archivos/Acuse Registro.pdf'; // Ruta del documento
+        link.download = 'Acuse Registro.pdf'; // Nombre del archivo
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    });
+  });
+			  
+				// Evento para el botón "Declinar" del formulario
+				document.getElementById('btnDeclinar').addEventListener('click', function() {
+				  // Muestra un SweetAlert con mensaje de error
+				  swalWithBootstrapButtons.fire({
+					title: 'Negaste la descarga!',
+					text: 'Has negado la descarga',
+					icon: 'error',
+					showCancelButton: false,
+					confirmButtonText: 'Aceptar',
+					customClass: {
+					  confirmButton: 'btn btn-danger'
+					}
+				  }).then((result) => {
+					// Envía el formulario si se hace clic en "Aceptar" en el SweetAlert
+					if (result.isConfirmed) {
+					  document.getElementById('formulario').submit();
+					}
+				  });
+				});
+			});
+			  </script>
+			  
+		
+		</div>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+			
+			h1,h2,h3,h4,h5,h6,p{
+			  font-family: 'Orbitron', sans-serif;
+			}
+		</style>
+		
+	</body>
+	</html>
