@@ -34,20 +34,20 @@
 <body>
 
 <!-- Titulo -->
-<!-- <div class="container">
+<div class="container">
     <div class="fade-in">
       <div class="image-container mt-2 mb-2">
         <img src="HMN\Diseño sin título (12).png" alt="Imagen" class="fade-image">
       </div>
     </div>
- -->
+
     <div class="logo-container">
-        <div class="logo-top mt-5 mr-5 mb-2" >
+        <div class="logo-top">
             <div class="text-right" style="background-color: white; display: flex; align-items: center; justify-content: flex-end;">
                 <img src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png" width="80" height="80" alt="Logo1" class="logo" style="margin-right: 5px;">
-                <div class="ml-5">
-                  <h5 style="color: #2c758c; margin-left: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="line1"></h5>
-                  <h5 style="color: #F17460; margin-left: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="line2"></h5>
+                <div>
+                  <h5 style="color: #2c758c; margin-right: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="line1"></h5>
+                  <h5 style="color: #F17460; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="line2"></h5>
                 </div>
               </div>
               
@@ -62,10 +62,10 @@
       </div>
       
       <script>
-        const text1 = "人类";
-        const text2 = "系统";
-        const text3 = "始终为改善您的生活而准备好。";
-        const text4 = "每一秒钟";
+        const text1 = "Human";
+        const text2 = "System";
+        const text3 = "Siempre listos para mejorar tu vida.";
+        const text4 = "A cada segundo";
       
         let i = 0;
         let j = 0;
@@ -175,178 +175,197 @@
     </div>
 
 
-<!-- Formulario de validacion --> 
-<div id="Validacion" class="text-center pl-2 pr-2" style="background-color: white">
-  <div class="col col-md text-white p-3  rounded-lg " style="background-color: #2C758C">
-  <div class="pb-1">
-    <h2 class="mb-3" ><i class="mr-3 fas fa-chart-line"></i>Invest Hong Kong</h2>
-  </div>
-    <div class="col col-md text-white p-3 mb-2  rounded-lg " style="background-color: #f87d6a">
-      <div class="text-white p-4  rounded-lg" style="background-color: #e8dddd54">
-        <h6 class="mb-3 fw-normal">IA - Fabian Genetics</h6>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://www.youtube.com/embed/ikGd8v9Y7_E" width="640" height="360"></iframe>
-        </div>
-      </div>
-    </div>
 
-  <form action="verification" method="POST">
-  <div class="text-white p-4  rounded-lg" style="background-color: rgba(245, 245, 245, 0.313)">
-  <h5 class="fw-normal" style="text-align: justify;">Dear Laura Jiang,</h5><br>
-  <div class="mb-5 fw-normal">
-  <p style="text-align: justify; size: 40px;">I hope this message finds you well. First and foremost, I want to express my sincere gratitude for your email and the genuine interest you've shown in my project. It's heartening to know that InvestHK's services are free and that they are willing to provide support.
-     <br>
-    <br> I am greatly pleased with the opportunity to explore how our collaboration could shape this project and take it to new heights. I am eager to discuss further details and explore how your organization and my project can work together.
-  <br>
-  <br>Your proposal for a call to exchange additional information is highly valuable to me. While we are in different time zones, I want to assure you that I am willing to adjust my availability for this important dialogue. You can contact me directly through my personal mobile number: 4777035558.
-    <br>
-  <br>Allow me to take this opportunity to share a bit more about the nature of my project. Currently, we are seeking to implement a technology based on human identification. This technology focuses on storing encrypted data in a database hosted in Hong Kong. As part of our focus on innovation, we are interested in developing an application using machine learning language, similar to the technology employed by GPT. Furthermore, we intend to host and manage the platform on a Chinese service cloud.
-   <br>
-  <br>These are just the initial steps of an ambitious project, and I highly value the opportunity to have the support and expertise of InvestHK on this journey. I am eagerly looking forward to the possibility of discussing this project in greater depth and exploring how we can collaborate to achieve significant impact.  
-  <br>
-  <br>I appreciate your time and attention once again, and I am eager to hear from you. I look forward to your call to advance in this exciting collaboration opportunity.
-    <br>
-  <br>Best regards,
-  <br>
-    <br>
-    CEO de Human System.
-    <br>	 
-    Sergio Campos Medina
-  </p>
-        </div>
-
-
-  <form id="formulario" action="verification" method="POST">
-    <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
-      <div class="form-check ">
-        <input class="form-check-input" type="checkbox" id="gridCheck" onchange="habilitarBotones()">
-        <label class="form-check-label" for="gridCheck" style="color:#2d7990">
-      <p>	 The following option enables the visualization and download of an electronic document.</p>
-        </label>
-      </div>
-      <h5 class="mb-3 fw-normal" style="color:#2c758c">Would you like to view the electronic document for subsequent download?</h5>
-      <button id="btnAceptar" type="button" class="btn btn-success mr-3" disabled><i class="mr-2 fas fa-eye"></i>Yes</button>
-      <button id="btnDeclinar" type="button" class="btn btn-danger" disabled><i class="mr-2 fas fa-times"></i>No</button>
-    </div>
-  </form>
-  
-  <script>
-    function habilitarBotones() {
-      var checkbox = document.getElementById('gridCheck');
-      var btnAceptar = document.getElementById('btnAceptar');
-      var btnDeclinar = document.getElementById('btnDeclinar');
-      
-      if (checkbox.checked) {
-        btnAceptar.disabled = false;
-        btnDeclinar.disabled = false;
-      } else {
-        btnAceptar.disabled = true;
-        btnDeclinar.disabled = true;
+	<!-- Formulario de validacion --> 
+  <div id="Validacion" class="text-center" style="background-color: white">
+        <div class="text-white pl-3 pr-3 pb-3 pt-4 ml-3 mr-3 rounded-lg " style="background: linear-gradient(to bottom,  #2C758C ,  #F17460 )">
+        <div class="text-white p-5  rounded-lg " style="color: #2c758c; background-color: rgba(245, 245, 245, 0.313)">
+          <div class="register-form form ml-2 mr-2" style="color:white">
+            <h2 class="">¿Qué es el Sistema de Identificacion Humana?</h2>   <br>
+             <p style="text-align: justify;">El sistema de identificación humana consta de una tarjeta con chip y una aplicación web que permite realizar y recibir pagos. La tarjeta de identificación almacena datos personales y financieros, y se vincula a la aplicación web a través de un código QR. La aplicación web ofrece diversas funcionalidades, como la posibilidad de pagar con la tarjeta, consultar el historial de transacciones y gestionar los fondos. Además, la aplicación permite enviar y recibir dinero entre usuarios y realizar pagos a través de un sistema de códigos QR. En resumen, este sistema de identificación humana permite una gestión eficiente y segura de transacciones financieras a través de una tarjeta de identificación y una aplicación web.</p>
+          </div><div id="qrCode"></div>
+          <button id="btnAceptar" type="button" class="btn btn-outline-danger mr-3">Donar</button>
+          <script>
+// Agregar evento al botón de donar
+var btnDonar = document.getElementById("btnAceptar");
+btnDonar.addEventListener("click", function () {
+  // Mostrar el swal con los botones de donación
+  Swal.fire({
+    title: "Selecciona una cantidad para donar",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar",
+    confirmButtonText: "Donar",
+    html:
+      '<button class="swal-donate-button" data-amount="50" id="btn50">$50</button>' +
+      '<button class="swal-donate-button" data-amount="100" id="btn100">$100</button>' +
+      '<button class="swal-donate-button" data-amount="200" id="btn200">$200</button>' +
+      '<button class="swal-donate-button" data-amount="500" id="btn500">$500</button>' +
+      '<input type="number" placeholder="Pago con Stripe" id="customAmount" class="swal-donate-input">' +
+      '<div id="qrCode"></div>',
+    focusConfirm: false,
+    preConfirm: function () {
+      // Obtener el valor de la cantidad personalizada
+      var customAmount = document.getElementById("customAmount").value;
+      if (customAmount) {
+        return customAmount;
       }
+    },
+    didOpen: function () {
+      // Asignar eventos click a los botones de donación
+      document.getElementById("btn50").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/vBh6208/Whats-App-Image-2023-07-11-at-8-20-48-AM.jpg");
+      });
+      document.getElementById("btn100").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/bbnvPJp/Whats-App-Image-2023-07-11-at-8-20-48-AM-1.jpg");
+      });
+      document.getElementById("btn200").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/JKR3LBn/Whats-App-Image-2023-07-11-at-8-20-48-AM-3.jpg");
+      });
+      document.getElementById("btn500").addEventListener("click", function () {
+        showQRImage("https://i.ibb.co/wKcckt4/Whats-App-Image-2023-07-11-at-8-20-48-AM-2.jpg");
+      });
+    },
+  }).then(function (result) {
+    if (result.value) {
+      var amount = result.value;
+      // Inicializar Stripe con tu clave pública
+      var stripe = Stripe("pk_live_51NSLmIBNUCxInZmnL6E2lNVgEqJXiBU9WOVrj53JxNUradDkE8gR2IbOUdstUibAlv766OmwsylWauUv4ptRa2lk00w9DO2Go6");
+
+      // Crear una sesión de pago en el servidor
+      fetch("/crear-sesion-pago", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ amount: amount }),
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          // Redirigir al usuario a la página de pago de Stripe
+          return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(function (result) {
+          if (result.error) {
+            // Manejar el error de Stripe
+            console.error(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          // Manejar otros errores
+          console.error(error);
+        });
     }
-  </script>
-  
-        </div>
-        </div>
-        </div>
+  });
 
-</div>
+  // Función para mostrar la imagen del código QR en el Swal
+  function showQRImage(imageUrl) {
+    // Insertar la imagen en el Swal
+    Swal.update({
+      imageUrl: imageUrl,
+      imageWidth: 300,
+      imageHeight: 300,
+      imageAlt: "Código QR de donación",
+    });
+  }
+});
+          </script>
+   <br> <br>
+          <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
+            <div class="register-form form" style="color:#2d7990">
+              <form action="https://script.google.com/macros/s/AKfycbw0Hpy71dqrdYCEJf4SsMTQHzcgr_J3-HkvPb1s1zPLalpz0fV6c3ivzzlBnmjx3KT0/exec" method="POST">
+              <div class="form-group mt-2">
+                  <label for="inputNombre">Nombre Completo</label> 
+                  <input type="text" class="form-control" style="color:#f87d6a" name="nombre" id="inputNombre" placeholder="Sergio Fernandez Ramirez" >
+                </div>
+                <div class="form-group">
+                  <label for="inputDireccion">Dirección</label> 
+                  <input type="text" class="form-control" style="color:#f87d6a" name="direccion" id="inputDireccion" placeholder="Ayuntamiento #183 Hidalgo, Tlalpan. CDMX">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCorreo">Correo</label>
+                    <input type="email" class="form-control" style="color:#f87d6a" name="correo" id="inputCorreo" placeholder="SergioFR@gmail.com">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputCelular">Telefono</label>
+                    <input type="number" class="form-control" style="color:#f87d6a" name="telefono" id="inputCelular" placeholder="1234567890" required minlength="10" maxlength="10">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCURP">CURP</label>
+                    <input type="text" class="form-control" style="color:#f87d6a" name="curp" id="inputCURP" placeholder="XACSXXXXXXHJFMFRAX" required minlength="16" maxlength="18" >
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputRFC">RFC</label>
+                    <input type="text" class="form-control" style="color:#f87d6a" name="rfc" id="inputRFC" placeholder="XACS00000XX0" required minlength="12" maxlength="13">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputFechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" style="color:#f87d6a" class="form-control" name="fecha_nacimiento" id="inputFechaNacimiento" required>
+                  </div>  
+                  <div class="form-group col-md-6">
+                    <label for="inputTarjeta">Tarjeta con Chip</label>
+                    <input type="text" class="form-control" style="color:#f87d6a" name="tarjeta_chip" id="inputTarjeta" placeholder="1234567890123456" required minlength="16" maxlength="16">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Contraseña</label>
+                  <input type="password" class="form-control" style="color:#f87d6a" name="contraseña" placeholder="***********" required tabindex="2" minlength="8" maxlength="20">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck" style="color:#2d7990">
+                  Acepto el tratamiento de mis datos personales por Human System. (Objetivamente Demostrativo)
+                  </label>
+                  </div>
+                <button id="btnenviar" type="submit" value="Enviar" class="btn btn-info mt-3">Registrar</button>
+                </form>
+              </div>
+            </div>
+              </div> 
 
-
-
+              <script>
+                // Agrega un evento de clic al botón "Registrar"
+                document.getElementById('btnenviar').addEventListener('click', function() {
+                    Swal.fire({
+                        icon: 'question',
+                        title: 'Servicio actualmente no disponible',
+                        text: 'Lamentablemente, el servicio que estás buscando no está disponible en este momento. Por favor, inténtalo más tarde.',
+                        confirmButtonText: 'OK'
+                    });
+                });
+            </script>
 
 <!-- Pie de pagina -->
+<div style="color: #2d7990 " class="mt-3" style="background-color: white;">
+	<a class="" href="#">
+	  <img class="" src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png" width="80" height="80" alt="Logo">		
+	  </a>
+	<p class="m-0 pb-4"> Programador Sergio Campos Medina. <br> Registro de obra No.03-2022-050214132600-01<br>  &copy; 2022-2027</p>
 
-<div style="color: #2d7990; background-color: white; text-align: center;" class="mt-3">
-<a class="" href="#">
-<img class="" src="https://i.ibb.co/J2kzm55/H-S-Logo.png" width="80" height="80" alt="Logo">		
-</a>
-<p class="m-0 p-4">Autor Sergio Campos Medina.<br>
-Registro: No.03-2022-050214132600-01 
-<br> Patente: MX/a/2023/001585.</p>
-</div>
+  </div>
 
+<!-- Scripts --> 
 
-<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<!-- Scrollreveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- Dependencias de bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+crossorigin="anonymous"></script> 
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <!-- Scrollreveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="assets/js/scrollReveal.js"></script>
-    <!-- Dependencias de bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-    crossorigin="anonymous"></script> 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-});
-document.getElementById('btnAceptar').addEventListener('click', function() {
-swalWithBootstrapButtons.fire({
-  title: 'Accepted the view!',
-  text: 'Press the button to download the document.',
-  icon: 'success',
-  imageUrl: 'https://i.ibb.co/mcYD5QN/Negro-Simple-Profesional-Carta-de-Renuncia-1.png',
-  imageWidth: 900,
-  imageHeight: 1000,
-  imageAlt: 'Imagen personalizada',
-  confirmButtonText: 'Download',
-  customClass: {
-    confirmButton: 'btn btn-success'
-  }
-}).then((result) => {
-  if (result.isConfirmed) {
-    // Crea un enlace temporal y simula un clic para descargar el documento
-    const link = document.createElement('a');
-    link.href = 'Archivos/InvestHK.pdf'; // Ruta del documento
-    link.download = 'InvestHK.pdf'; // Nombre del archivo
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-});
-});
-    
-    // Evento para el botón "Declinar" del formulario
-    document.getElementById('btnDeclinar').addEventListener('click', function() {
-      // Muestra un SweetAlert con mensaje de error
-      swalWithBootstrapButtons.fire({
-      title: 'You declined the download!',
-      text: 'You have declined the download.',
-      icon: 'error',
-      showCancelButton: false,
-      confirmButtonText: 'Accepted.',
-      customClass: {
-        confirmButton: 'btn btn-danger'
-      }
-      }).then((result) => {
-      // Envía el formulario si se hace clic en "Aceptar" en el SweetAlert
-      if (result.isConfirmed) {
-        document.getElementById('formulario').submit();
-      }
-      });
-    });
-  });
-    </script>
-    
+<!-- Alerta --> 
 
-</div>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-  
-  h1,h2,h3,h4,h5,h6,p{
-    font-family: 'Orbitron', sans-serif;
-  }
-</style>
 
 </body>
 </html>
