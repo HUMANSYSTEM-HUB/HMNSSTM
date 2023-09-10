@@ -32,87 +32,17 @@
 </head>
 <body>
 
-<!-- Titulo -->
-<div class="container">
-    <div class="fade-in">
-      <div class="image-container mt-2 mb-2">
-        <img src="HMN\Diseño sin título (12).png" alt="Imagen" class="fade-image">
-      </div>
+    <div class=" m-2 image-container fade-in">
+      <img src="HMN\Home.svg" width="100%" height="100%" >
     </div>
+  <div class="m-2 ml-3 mr-3  image-container">
+    <img src="HMN\About.svg" width="100%" height="100%" >
+  </div>
 
-    <div class="logo-container">
-        <div class="logo-top">
-            <div class="text-right" style="background-color: white; display: flex; align-items: center; justify-content: flex-end;">
-                <img src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png" width="80" height="80" alt="Logo1" class="logo" style="margin-right: 5px;">
-                <div>
-                  <h5 style="color: #2c758c; margin-right: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="line1"></h5>
-                  <h5 style="color: #F17460; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="line2"></h5>
-                </div>
-              </div>
-              
-              
-        </div>
-        <div class="logo-middle">
-          <h1 class="text-right mt-4" style="color: #2c758c; font-family: 'Orbitron', sans-serif;" id="line3"></h1>
-        </div>
-        <div class="logo-bottom">
-          <h6 class="text-right mt-4" style="color: #F17460; font-family: 'Orbitron', sans-serif;" id="line4"></h6>
-        </div>
-      </div>
-      
-      <script>
-        const text1 = "Human";
-        const text2 = "System";
-        const text3 = "Siempre listos para mejorar tu vida.";
-        const text4 = "A cada segundo";
-      
-        let i = 0;
-        let j = 0;
-        let k = 0;
-        let l = 0;
-      
-        function typeWriter1() {
-          if (i < text1.length) {
-            document.getElementById("line1").innerHTML += text1.charAt(i);
-            i++;
-            setTimeout(typeWriter1, Math.floor(Math.random() * 150) + 50);
-          }
-        }
-      
-        function typeWriter2() {
-          if (j < text2.length) {
-            document.getElementById("line2").innerHTML += text2.charAt(j);
-            j++;
-            setTimeout(typeWriter2, Math.floor(Math.random() * 150) + 50);
-          }
-        }
-      
-        function typeWriter3() {
-          if (k < text3.length) {
-            document.getElementById("line3").innerHTML += text3.charAt(k);
-            k++;
-            setTimeout(typeWriter3, Math.floor(Math.random() * 150) + 50);
-          }
-        }
-      
-        function typeWriter4() {
-          if (l < text4.length) {
-            document.getElementById("line4").innerHTML += text4.charAt(l);
-            l++;
-            setTimeout(typeWriter4, Math.floor(Math.random() * 150) + 50);
-          }
-        }
-      
-        typeWriter1();
-        setTimeout(typeWriter2, text1.length * (Math.floor(Math.random() * 150) + 50) + 1000);
-        setTimeout(typeWriter3, (text1.length + text2.length) * (Math.floor(Math.random() * 150) + 50) + 2000);
-        setTimeout(typeWriter4, (text1.length + text2.length + text3.length) * (Math.floor(Math.random() * 150) + 50) + 3000);
-      </script>
-</div>      
-      
+ 
 
 <!-- Nav--> 
-<nav class="navbar navbar-expand-lg rounded-lg navbar-dark sticky-top mb-3 ml-2 mr-2 " style="background-color: whitesmoke">
+<nav class="navbar navbar-expand-lg rounded-lg navbar-dark sticky-top ml-2 mr-2 " style="background-color: whitesmoke">
     <a class="" href="#">
     <img class="align-items-center" src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png"  width="60" height="60" alt="Logo">		
     </a>
@@ -134,14 +64,14 @@
         carouselButton.addEventListener('click', function() {
           // Definimos las imágenes que se mostrarán
           const images = [
-            'https://i.ibb.co/58CNGrf/Home.png',
-            'https://i.ibb.co/qxgXBY1/About.png',
+            'https://i.ibb.co/JCkrPyC/Home.png',
+            'https://i.ibb.co/N7crk7W/About.png',
 
-            'https://i.ibb.co/ySmz0nN/Services.png',
-            'https://i.ibb.co/g69RT8x/5.png',
-            'https://i.ibb.co/9ZrSXYy/6.png',
-            'https://i.ibb.co/n0GCxvK/7.png',
-            'https://i.ibb.co/5kS5m5r/8.png'
+            'https://i.ibb.co/rpNGg53/Services.png',
+            'https://i.ibb.co/8r0b4NX/Services-2.png',
+            'https://i.ibb.co/t3spVwv/Services-3.png',
+            'https://i.ibb.co/bdDGbtD/6.png',
+            'https://i.ibb.co/g4311R3/7.png',
 
             // Agrega más imágenes si lo deseas
           ];
@@ -154,13 +84,13 @@
       
           // Mostramos la ventana emergente con las imágenes
           Swal.fire({
-            title: 'Información',
+            title: 'Information',
             icon: 'question',
             html: imagesHtml,
        showConfirmButton: true,
       showCancelButton: true,
-      confirmButtonText: 'Confirmar',
-      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Confirm',
+      cancelButtonText: 'Cancel',
       focusCancel: true,
       customClass: {
         confirmButton: 'swal-button',
@@ -173,18 +103,15 @@
   </nav>
     </div>
 
-
-<div>
-              <div class="image-container">
-                <img src="HMN\¡Presentando la Revolución en Identificación Humana! (1).png" width="100%" height="100%" >
-              </div>
-            </div>
-
+ 
 	<!-- Formulario de validacion --> 
-  <div id="Validacion" class="text-center" style="background-color: white">
-        <div class="text-white m-2 rounded-lg " style="background: linear-gradient(to bottom,  #2C758C ,  #F17460 )">
-        <div class="text-white p-5  rounded-lg " style="color: #2c758c; background-color: rgba(245, 245, 245, 0.313)">
-          <div class="register-form form ml-2 mr-2" style="color:white">
+  <div id="Validacion" class="text-center mt-2 ml-4 mr-4" style="background-color: white">
+        <div class="text-white  rounded-lg " style="background: linear-gradient(to bottom,  #2C758C ,  #F17460 )">
+        <div class="text-white pr-5 pl-5 pb-5 rounded-lg " style="color: #2c758c; background-color: rgba(245, 245, 245, 0.313)">
+          <div class=" image-container">
+            <img src="HMN\About (6).svg" width="100%" height="100%" >
+          </div>
+          <!--        <div class="register-form form ml-2 mr-2" style="color:white">
             <style>
               .justificado {
                   text-align: justify;
@@ -200,7 +127,7 @@
           <p class="justificado">Our mission is to promote a more inclusive and prosperous future for all. 💪 Follow our updates to learn more about our advancements and contributions!</p>
           
           <p class="justificado">Currently, we are also engaging in international democratic efforts to contribute to peace 🕊️. United for a better world. #UniversalIdentity #SustainableEconomy #Transparency #SustainableDevelopment #WorldPeace ✌️</p>
-        </div> <div id="qrCode"></div>
+        </div> <div id="qrCode"></div> -->
           <button id="btnAceptar" type="button" class="btn btn-outline-danger mr-3">Donar</button>
           <script>
 // Agregar evento al botón de donar
@@ -289,9 +216,10 @@ btnDonar.addEventListener("click", function () {
 });
           </script>
    <br> <br>
-          <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
+          <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
+           
             <div class="register-form form" style="color:#2d7990">
-              <form action="https://script.google.com/macros/s/AKfycbw0Hpy71dqrdYCEJf4SsMTQHzcgr_J3-HkvPb1s1zPLalpz0fV6c3ivzzlBnmjx3KT0/exec" method="POST">
+              <form action="" method="">
               <div class="form-group mt-2">
                   <label for="inputNombre">Nombre Completo</label> 
                   <input type="text" class="form-control" style="color:#f87d6a" name="nombre" id="inputNombre" placeholder="Sergio Fernandez Ramirez" >
@@ -341,23 +269,30 @@ btnDonar.addEventListener("click", function () {
                   Acepto el tratamiento de mis datos personales por Human System. (Objetivamente Demostrativo)
                   </label>
                   </div>
-                <button id="btnenviar" type="submit" value="Enviar" class="btn btn-info mt-3">Registrar</button>
+                <button id="btnenviar" type="" value="" class="btn btn-info mt-3">Register</button>
                 </form>
               </div>
             </div>
               </div> 
 
               <script>
-                // Agrega un evento de clic al botón "Registrar"
-                document.getElementById('btnenviar').addEventListener('click', function() {
-                    Swal.fire({
-                        icon: 'question',
-                        title: 'Servicio actualmente no disponible',
-                        text: 'Lamentablemente, el servicio que estás buscando no está disponible en este momento. Por favor, inténtalo más tarde.',
-                        confirmButtonText: 'OK'
-                    });
-                    </script>
-              
+               document.getElementById('btnenviar').addEventListener('click', function() {
+    Swal.fire({
+        icon: 'question',
+        title: 'Servicio actualmente no disponible',
+        text: 'Lamentablemente, el servicio que estás buscando no está disponible en este momento. Por favor, inténtalo más tarde.',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Aquí puedes agregar acciones adicionales después de hacer clic en OK
+        }
+    });
+    // Deshabilita la interacción con la página mientras la alerta está presente
+    document.body.style.pointerEvents = 'none';
+});
+
+            </script>
+            
 
 <!-- Pie de pagina -->
 <div style="color: #2d7990 " class="mt-3" style="background-color: white;">
@@ -365,9 +300,8 @@ btnDonar.addEventListener("click", function () {
 	  <img class="" src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png" width="80" height="80" alt="Logo">		
 	  </a>
 	<p class="m-0 pb-4"> Programador Sergio Campos Medina. <br> Registro de obra No.03-2022-050214132600-01<br>  &copy; 2022-2027</p>
-
   </div>
-
+ 
 <!-- Scripts --> 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
