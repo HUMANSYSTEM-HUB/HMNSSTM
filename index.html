@@ -5,44 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://i.ibb.co/PTcH9jG/Imagen1.png">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-      <!-- CSS propio -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" type="text/css" href="estilos.css">
-<!-- SweetAlert2 CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
-
-<!-- Font Awesome CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- SweetAlert2 JS -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <title>Sistema de Identificación Humana</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <title>Registro</title>
 </head>
 <body>
 
-    <div class=" m-2 image-container fade-in">
-      <img src="HMN\Home.svg" width="100%" height="100%" >
-    </div>
-  <div class="m-2 ml-3 mr-3  image-container">
-    <img src="HMN\About.svg" width="100%" height="100%" >
-  </div>
+<!-- Titulo -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
- 
+h1, h2, h3, h4, h5, h6, p,
+  #Navbar, .navbar, .card, .nav-link, .nav-user, .nav-building,
+  .nav-link1, .nav-link2, .nav-link4, .nav-link5, .nav-link6, .nav-link7 {
+    font-family: 'Orbitron', sans-serif;
+  }
+#pricing-container {
+    display: none;
+}
+#Navbar {
+  background-color: white;
+  padding: 0px 0;
+}
+
+.navbar {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.navbar img {
+  border-radius: 20%;
+  margin-right: 10px;
+}
+
+
+
+.search-container {
+  position: relative;
+  width: 250px;
+  margin-right: 10px;
+}
+
+#suggestions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.nav-link, .nav-calendar, .nav-transactions, .nav-files, .nav-user, .nav-building, .nav-link1, .nav-link2, .nav-link4, .nav-link5, .nav-link6, .nav-link7, .nav-statistics, .nav-documents{
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #f9f9f9;
+} 
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-date {
+  font-size: 14px;
+  color: #777;
+}
+
+.productos-container, .amigos-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.producto, .amigo {
+  flex: 0 0 30%;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.producto img, .amigo img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+</style>
 
 <!-- Nav--> 
-<nav class="navbar navbar-expand-lg rounded-lg navbar-dark sticky-top ml-2 mr-2 " style="background-color: whitesmoke">
+<nav class="navbar navbar-expand-lg rounded-lg navbar-dark sticky-top mb-3 ml-2 mr-2" style="background-color: whitesmoke">
     <a class="" href="#">
     <img class="align-items-center" src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png"  width="60" height="60" alt="Logo">		
     </a>
@@ -53,258 +130,137 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto align-items-center">
       <li class="nav-item">
-        <a id="carousel-button" class="nav-link" style="color: #2c758c; font-size: 25px;" href="#"><i class="fa fa-file-media"></i></a>
-      </li>
-      
-      <script>
-        // Obtenemos el botón por su ID
-        const carouselButton = document.getElementById('carousel-button');
-      
-        // Agregamos un event listener al botón
-        carouselButton.addEventListener('click', function() {
-          // Definimos las imágenes que se mostrarán
-          const images = [
-            'https://i.ibb.co/JCkrPyC/Home.png',
-            'https://i.ibb.co/N7crk7W/About.png',
-
-            'https://i.ibb.co/rpNGg53/Services.png',
-            'https://i.ibb.co/8r0b4NX/Services-2.png',
-            'https://i.ibb.co/t3spVwv/Services-3.png',
-            'https://i.ibb.co/bdDGbtD/6.png',
-            'https://i.ibb.co/g4311R3/7.png',
-
-            // Agrega más imágenes si lo deseas
-          ];
-      
-          // Creamos un array de objetos con la estructura requerida por SweetAlert2
-          const carouselItems = images.map(image => ({ src: image }));
-      
-          // Construimos el HTML para mostrar las imágenes
-          const imagesHtml = carouselItems.map(item => `<img src="${item.src}" style="width: 100%; height: auto; object-fit: contain;">`).join('');
-      
-          // Mostramos la ventana emergente con las imágenes
-          Swal.fire({
-            title: 'Information',
-            icon: 'question',
-            html: imagesHtml,
-       showConfirmButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'Confirm',
-      cancelButtonText: 'Cancel',
-      focusCancel: true,
-      customClass: {
-        confirmButton: 'swal-button',
-        cancelButton: 'swal-button'
-      },
-          });
-        });
-      </script>
-       </ul>
+        <a class="nav-link" href="#" style="color: #2c758c; font-size: 25px;"><i class="fas fa-file-media"></i></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="login" style="color: #2c758c; font-size: 25px;">
+            <i class="fas fa-user"></i> Ingresa
+            <span class="sr-only">Ingresa (página actual)</span>
+        </a>
+    </li>
+    
+    </ul>
   </nav>
     </div>
 
- 
+    <div class=" image-container fade-in">
+      <img src="https://i.ibb.co/bRHHkmv/Home.png" width="100%" height="100%" >
+    </div>
+    <div class=" image-container fade-in">
+      <img src="https://i.ibb.co/1QZW14v/About.png" width="100%" height="100%" >
+    </div>
+    <div class=" image-container fade-in">
+      <img src="https://i.ibb.co/hC0rSyJ/About-2.png" width="100%" height="100%" >
+    </div>
+    <div class=" image-container fade-in">
+      <img src="https://i.ibb.co/b6CL9ZP/Services-2.png" width="100%" height="100%" >
+    </div>
+    <div class=" image-container fade-in">
+      <img src="https://i.ibb.co/NLxSqqt/Services-3.png" width="100%" height="100%" >
+    </div>
+    <div class="image-container fade-in rounded-lg mt-2" >
+      <img src="https://i.ibb.co/dQZTVRN/7.png" width="100%" height="100%" >
+    </div>
+    <div class="mt-3 image-container fade-in">
+      <img src="https://i.ibb.co/LZzBMJW/8.png" width="100%" height="100%" >
+    </div>
+
 	<!-- Formulario de validacion --> 
-  <div id="Validacion" class="text-center mt-2 ml-4 mr-4" style="background-color: white">
-        <div class="text-white  rounded-lg " style="background: linear-gradient(to bottom,  #2C758C ,  #F17460 )">
-        <div class="text-white pr-5 pl-5 pb-5 rounded-lg " style="color: #2c758c; background-color: rgba(245, 245, 245, 0.313)">
-          <div class=" image-container">
-            <img src="HMN\About (6).svg" width="100%" height="100%" >
-          </div>
-          <!--        <div class="register-form form ml-2 mr-2" style="color:white">
-            <style>
-              .justificado {
-                  text-align: justify;
-              }
-          </style>
-          
-          <h2 class="justificado">Human Identification System</h2>
-          <br>
-          <p class="justificado">Latest news! 🌍 We are actively collaborating with INAI, the Institute responsible for the Presidency of the Network of Transparency and Access to Information, on an international level. We work tirelessly to improve universal identity accreditation parameters in conjunction with the OECD.</p>
-          
-          <p class="justificado">In Latin America 🌎, we participate in various forums and summits with the main focus on the economy and sustainable development. We have shared our perspectives in previous summits and internationally relevant forums, such as the 2023 Global Forum on Democracy, the 4th edition of the Summit on Common Finance, the Idea in Action Forum for the Right to Decide, and the Digital Innovation Day 2023.</p>
-          
-          <p class="justificado">Our mission is to promote a more inclusive and prosperous future for all. 💪 Follow our updates to learn more about our advancements and contributions!</p>
-          
-          <p class="justificado">Currently, we are also engaging in international democratic efforts to contribute to peace 🕊️. United for a better world. #UniversalIdentity #SustainableEconomy #Transparency #SustainableDevelopment #WorldPeace ✌️</p>
-        </div> <div id="qrCode"></div> -->
-          <button id="btnAceptar" type="button" class="btn btn-outline-danger mr-3">Donar</button>
-          <script>
-// Agregar evento al botón de donar
-var btnDonar = document.getElementById("btnAceptar");
-btnDonar.addEventListener("click", function () {
-  // Mostrar el swal con los botones de donación
-  Swal.fire({
-    title: "Selecciona una cantidad para donar",
-    showCancelButton: true,
-    cancelButtonText: "Cancelar",
-    confirmButtonText: "Donar",
-    html:
-      '<button class="swal-donate-button" data-amount="50" id="btn50">$50</button>' +
-      '<button class="swal-donate-button" data-amount="100" id="btn100">$100</button>' +
-      '<button class="swal-donate-button" data-amount="200" id="btn200">$200</button>' +
-      '<button class="swal-donate-button" data-amount="500" id="btn500">$500</button>' +
-      '<input type="number" placeholder="Pago con Stripe" id="customAmount" class="swal-donate-input">' +
-      '<div id="qrCode"></div>',
-    focusConfirm: false,
-    preConfirm: function () {
-      // Obtener el valor de la cantidad personalizada
-      var customAmount = document.getElementById("customAmount").value;
-      if (customAmount) {
-        return customAmount;
-      }
-    },
-    didOpen: function () {
-      // Asignar eventos click a los botones de donación
-      document.getElementById("btn50").addEventListener("click", function () {
-        showQRImage("https://i.ibb.co/vBh6208/Whats-App-Image-2023-07-11-at-8-20-48-AM.jpg");
-      });
-      document.getElementById("btn100").addEventListener("click", function () {
-        showQRImage("https://i.ibb.co/bbnvPJp/Whats-App-Image-2023-07-11-at-8-20-48-AM-1.jpg");
-      });
-      document.getElementById("btn200").addEventListener("click", function () {
-        showQRImage("https://i.ibb.co/JKR3LBn/Whats-App-Image-2023-07-11-at-8-20-48-AM-3.jpg");
-      });
-      document.getElementById("btn500").addEventListener("click", function () {
-        showQRImage("https://i.ibb.co/wKcckt4/Whats-App-Image-2023-07-11-at-8-20-48-AM-2.jpg");
-      });
-    },
-  }).then(function (result) {
-    if (result.value) {
-      var amount = result.value;
-      // Inicializar Stripe con tu clave pública
-      var stripe = Stripe("pk_live_51NSLmIBNUCxInZmnL6E2lNVgEqJXiBU9WOVrj53JxNUradDkE8gR2IbOUdstUibAlv766OmwsylWauUv4ptRa2lk00w9DO2Go6");
-
-      // Crear una sesión de pago en el servidor
-      fetch("/crear-sesion-pago", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ amount: amount }),
-      })
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (session) {
-          // Redirigir al usuario a la página de pago de Stripe
-          return stripe.redirectToCheckout({ sessionId: session.id });
-        })
-        .then(function (result) {
-          if (result.error) {
-            // Manejar el error de Stripe
-            console.error(result.error.message);
-          }
-        })
-        .catch(function (error) {
-          // Manejar otros errores
-          console.error(error);
-        });
-    }
-  });
-
-  // Función para mostrar la imagen del código QR en el Swal
-  function showQRImage(imageUrl) {
-    // Insertar la imagen en el Swal
-    Swal.update({
-      imageUrl: imageUrl,
-      imageWidth: 300,
-      imageHeight: 300,
-      imageAlt: "Código QR de donación",
-    });
-  }
-});
-          </script>
-   <br> <br>
-          <div class="text-white p-4 rounded-lg" style="background-color: whitesmoke">
-           
+  <div id="Validacion" class="text-center" style="background-color: white">
+    <div class="text-white p-4 ml-4 mr-4 mt-2 rounded-lg " style="background: linear-gradient(to bottom,  #2C758C ,  #F17460 )">
+          <div class="text-white pl-5 pr-5 pt-3 pb-3 rounded-lg" style="background-color: whitesmoke">
             <div class="register-form form" style="color:#2d7990">
-              <form action="" method="">
-              <div class="form-group mt-2">
-                  <label for="inputNombre">Nombre Completo</label> 
-                  <input type="text" class="form-control" style="color:#f87d6a" name="nombre" id="inputNombre" placeholder="Sergio Fernandez Ramirez" >
+              <form action="/register" method="POST">
+                <h2 class="mt-2 mb-4">Formulario de registro <i class="fas fa-file"></i>
+                </h2>
+                <div class="form-group mt-2">
+                    <h6 for="inputNombre"> <i class="mr-2 fas fa-user"></i>Nombre Completo </h6>
+                    <input type="text" class="form-control" style="color:#f87d6a" name="nombre" id="inputNombre" placeholder="Nombre(s) Apellido Paterno Apellido Materno" required pattern="\w+\s\w+\s\w+" title="Por favor ingresa tu nombre completo">
                 </div>
                 <div class="form-group">
-                  <label for="inputDireccion">Dirección</label> 
-                  <input type="text" class="form-control" style="color:#f87d6a" name="direccion" id="inputDireccion" placeholder="Ayuntamiento #183 Hidalgo, Tlalpan. CDMX">
+                    <h6 for="inputDireccion"> <i class="mr-2 fas fa-map-marker-alt"></i>Dirección</h6>
+                    <input type="text" class="form-control" style="color:#f87d6a" name="direccion" id="inputDireccion" placeholder="Dirección" required>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCorreo">Correo</label>
-                    <input type="email" class="form-control" style="color:#f87d6a" name="correo" id="inputCorreo" placeholder="SergioFR@gmail.com">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputCelular">Telefono</label>
-                    <input type="number" class="form-control" style="color:#f87d6a" name="telefono" id="inputCelular" placeholder="1234567890" required minlength="10" maxlength="10">
-                  </div>
+                    <div class="form-group col-md-6">
+                        <h6 for="inputCorreo">
+                          <i class="mr-2 fas fa-envelope"></i>Correo</h6>
+                        <input type="email" class="form-control" style="color:#f87d6a" name="correo" id="inputCorreo" placeholder="correo@gmail.com" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <h6 for="inputCelular"><i class="mr-2 fas fa-phone"></i>Teléfono</h6>
+                        <input type="tel" pattern="[0-9]{10}" class="form-control" style="color:#f87d6a" name="telefono" id="inputCelular" placeholder="123-333-4444" required>
+                    </div>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCURP">CURP</label>
-                    <input type="text" class="form-control" style="color:#f87d6a" name="curp" id="inputCURP" placeholder="XACSXXXXXXHJFMFRAX" required minlength="16" maxlength="18" >
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputRFC">RFC</label>
-                    <input type="text" class="form-control" style="color:#f87d6a" name="rfc" id="inputRFC" placeholder="XACS00000XX0" required minlength="12" maxlength="13">
-                  </div>
+                    <div class="form-group col-md-6">
+                        <h6 for="inputFechaNacimiento"><i class="mr-1 fas fa-birthday-cake"></i>                          Fecha de Nacimiento</h6>
+                        <input type="date" style="color:#f87d6a" class="form-control" name="fecha_nacimiento" id="inputFechaNacimiento" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <h6 for="inputLugarNacimiento"><i class="mr-1 fas fa-map-marked-alt"></i>
+                          Lugar de Nacimiento</h6>
+                        <select class="form-control" name="lugarNacimiento" id="inputLugarNacimiento" required>
+                            <option value="MEX">México - MEX</option>
+                            <option value="USA">Estados Unidos - USA</option>
+                            <option value="BRA">Brasil - BRA</option>
+                            <!-- ... otras opciones ... -->
+                        </select>
+                    </div>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputFechaNacimiento">Fecha de Nacimiento</label>
-                    <input type="date" style="color:#f87d6a" class="form-control" name="fecha_nacimiento" id="inputFechaNacimiento" required>
-                  </div>  
-                  <div class="form-group col-md-6">
-                    <label for="inputTarjeta">Tarjeta con Chip</label>
-                    <input type="text" class="form-control" style="color:#f87d6a" name="tarjeta_chip" id="inputTarjeta" placeholder="1234567890123456" required minlength="16" maxlength="16">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputPassword">Contraseña</label>
-                  <input type="password" class="form-control" style="color:#f87d6a" name="contraseña" placeholder="***********" required tabindex="2" minlength="8" maxlength="20">
-                  </div>
+                    <div class="form-group col-md-6">
+                        <h6 for="inputPassword1"><i class="mr-2 fas fa-lock"></i>Contraseña</h6>
+                        <input type="password" class="form-control" style="color:#f87d6a" name="contrasena1" id="inputPassword1" placeholder="***********" required minlength="8" maxlength="20">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <h6 for="inputPassword2"><i class="mr-2 fas fa-lock"></i>Confirmar Contraseña</h6>
+                        <input type="password" class="form-control" style="color:#f87d6a" name="contrasena2" id="inputPassword2" placeholder="***********" required minlength="8" maxlength="20">
+                    </div>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck">
-                  <label class="form-check-label" for="gridCheck" style="color:#2d7990">
-                  Acepto el tratamiento de mis datos personales por Human System. (Objetivamente Demostrativo)
-                  </label>
-                  </div>
-                <button id="btnenviar" type="" value="" class="btn btn-info mt-3">Register</button>
-                </form>
+                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                    <label class="form-check-label" for="gridCheck" style="color:#2d7990">
+                        Acepto las condiciones<i class="ml-2 fas fa-file"></i>
+                    </label>
+                </div>
+                <button id="btnenviar"  type="" class="btn btn-primary mt-3">Registrar</button>
+            </form>
               </div>
-            </div>
-              </div> 
+              </div>
+    </div>
+ 
 
-              <script>
-               document.getElementById('btnenviar').addEventListener('click', function() {
-    Swal.fire({
-        icon: 'question',
-        title: 'Servicio actualmente no disponible',
-        text: 'Lamentablemente, el servicio que estás buscando no está disponible en este momento. Por favor, inténtalo más tarde.',
-        confirmButtonText: 'OK'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Aquí puedes agregar acciones adicionales después de hacer clic en OK
-        }
-    });
-    // Deshabilita la interacción con la página mientras la alerta está presente
-    document.body.style.pointerEvents = 'none';
+    <script>
+        document.getElementById('btnenviar').addEventListener('click', function() {
+Swal.fire({
+ icon: 'question',
+ title: 'Servicio actualmente no disponible',
+ text: 'Lamentablemente, el servicio que estás buscando no está disponible en este momento. Por favor, inténtalo más tarde.',
+ confirmButtonText: 'OK'
+}).then((result) => {
+ if (result.isConfirmed) {
+     // Aquí puedes agregar acciones adicionales después de hacer clic en OK
+ }
+});
+// Deshabilita la interacción con la página mientras la alerta está presente
+document.body.style.pointerEvents = 'none';
 });
 
-            </script>
-            
+     </script>
+    
+
 
 <!-- Pie de pagina -->
 <div style="color: #2d7990 " class="mt-3" style="background-color: white;">
 	<a class="" href="#">
 	  <img class="" src="https://i.ibb.co/f4vZNKd/Captura-de-pantalla-2023-04-29-201016.png" width="80" height="80" alt="Logo">		
 	  </a>
-	<p class="m-0 pb-4"> Programador Sergio Campos Medina. <br> Registro de obra No.03-2022-050214132600-01<br>  &copy; 2022-2027</p>
-  </div>
- 
-<!-- Scripts --> 
+	<p class="m-0 pb-2"> Programador Sergio Campos Medina. <br> Registro de obra No.03-2022-050214132600-01<br>  &copy; 2022-2027</p>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </div>
+
+<!-- Scripts --> 
 <!-- Scrollreveal -->
 <script src="https://unpkg.com/scrollreveal"></script>
 <!-- Dependencias de bootstrap -->
@@ -314,9 +270,6 @@ crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
 crossorigin="anonymous"></script> 
-
-<!-- Alerta --> 
-
 
 </body>
 </html>
